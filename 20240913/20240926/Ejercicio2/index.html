@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selectores Básicos</title>
+    <style>
+        /* Cambia el color del texto de todos los elementos a #333 */
+        * {
+            color: #333;
+        }
+
+        /* Establece el color de fondo del elemento con id "contenedor" a #f0f0f0 */
+        #contenedor {
+            background-color: #f0f0f0;
+        }
+
+        /* Haz que el texto de la clase "destacado" sea negrita y de color azul */
+        .destacado {
+            font-weight: bold;
+            color: blue;
+        }
+
+        /* Aumenta el tamaño de fuente del h1 a 24px */
+        h1 {
+            font-size: 24px;
+        }
+
+        /* Usa un selector de hijo directo para cambiar el color de los li a verde */
+        ul > li {
+            color: green;
+        }
+
+        /* Aplica un estilo diferente al primer y último elemento de la lista */
+        ul > li:first-child {
+            font-weight: bold;
+        }
+
+        ul > li:last-child {
+            text-decoration: underline;
+        }
+
+        /* Utiliza un selector de atributo para estilizar todos los elementos con un atributo class */
+        [class] {
+            background-color: #e0e0e0;
+        }
+
+        /* Emplea un selector de hermanos adyacentes para dar un margen superior a los spans que siguen a otro span */
+        span + span {
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .caja {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            padding: 20px;
+            margin: 10px;
+            background-color: rgba(0, 150, 255, 0.5); /* Color de fondo usando rgba */
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra de caja */
+            border-radius: 10px; /* Borde redondeado */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Título Principal</h1>
+    <p class="destacado">Párrafo destacado</p>
+    <p>Párrafo normal</p>
+    <div id="contenedor">
+        <p>Párrafo dentro de un div</p>
+    </div>
+
+    <div>
+        <ul>
+            <li>Primer elemento</li>
+            <li>Segundo elemento</li>
+            <li>Tercer elemento</li>
+        </ul>
+        <p><span>Texto</span> con <span>múltiples</span> spans</p>
+    </div>
+
+    <div class="caja"></div>
+        Contenido dentro de la caja
+    </div>
+</body>
+
+</html>
