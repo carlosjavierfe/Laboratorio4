@@ -1,0 +1,37 @@
+/* Selector de clase */
+.texto-resaltado {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Selector de ID */
+  #titulo-principal {
+    font-size: 24px;
+    text-align: center;
+    color: blue;
+  }
+  
+  /* Selector de atributo */
+  a[href] {
+    color: green;
+    text-decoration: none;
+  }
+  
+  /* Selector descendiente */
+  div p {
+    color: purple;
+    margin-left: 10px;
+  }
+  
+  /* Pseudoclase */
+  button:hover {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .mi-caja {
+    padding: 20px;              /* Padding de 20px en todos los lados */
+    border: 2px solid black;     /* Borde sólido de 2px */
+    margin: 10px 15px;           /* Margen de 10px arriba y abajo, 15px a los lados */
+  }
+  

@@ -1,0 +1,137 @@
+/* Estilos generales para el layout principal */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout principal utilizando CSS Grid */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    "header header header header"
+    "nav main main sidebar"
+    "footer footer footer footer";
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+header {
+  grid-area: header;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #f4f4f4;
+  padding: 15px;
+}
+
+main {
+  grid-area: main;
+  background-color: #f9f9f9;
+  padding: 15px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #ddd;
+  padding: 15px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Contenedor de las tarjetas */
+.tarjetas-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.tarjeta {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.tarjeta h3 {
+  margin: 10px 0;
+}
+
+.tarjeta p {
+  color: #555;
+}
+
+/* Galería de imágenes responsive */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin: 20px;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-container {
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "sidebar"
+      "footer";
+  }
+}
