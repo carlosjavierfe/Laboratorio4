@@ -1,0 +1,108 @@
+//Ejercicio1
+
+// Declaración de variables
+const nombreUsuario = "Miguel"; // Nombre de usuario
+let edad = 30;                  // Edad
+let estaActivo = true;          // ¿Está activo?
+
+// Creación de un objeto simple de un producto
+const producto = {
+    nombre: "Laptop",
+    precio: 1500,
+    disponible: true
+};
+
+// Imprimir valores
+console.log(nombreUsuario); // "Miguel"
+console.log(edad);          // 30
+console.log(estaActivo);    // true
+console.log(producto);      // { nombre: "Laptop", precio: 1500, disponible: true }
+
+
+//Ejercicio 2
+// Verifica si un usuario es mayor de edad
+let edad = 20; // Cambia este valor para probar diferentes edades
+
+if (edad >= 18) {
+    console.log("El usuario es mayor de edad.");
+} else {
+    console.log("El usuario es menor de edad.");
+}
+
+// Compara precios
+let precio1 = 100;
+let precio2 = 150;
+
+if (precio1 < precio2) {
+    console.log("El precio más bajo es:", precio1);
+} else if (precio1 > precio2) {
+    console.log("El precio más bajo es:", precio2);
+} else {
+    console.log("Ambos precios son iguales:", precio1);
+}
+
+// Bucle del 1 al 5
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+
+
+//Ejercicio3
+// Función tradicional que saluda al usuario
+function saludar(nombre) {
+    console.log(`Hola, ${nombre}! Bienvenido.`);
+}
+
+// Función flecha que calcula el total con impuesto (suponiendo un 19% de IVA)
+const calcularTotal = (precio) => {
+    const impuesto = 0.19;
+    return precio + (precio * impuesto);
+};
+
+// Función que recibe un callback simple
+function procesarOperacion(numero, callback) {
+    console.log("Procesando operación...");
+    return callback(numero);
+}
+
+// Ejemplos de uso:
+
+// Uso de la función saludar
+saludar("Miguel");
+
+// Uso de la función calcularTotal
+const precio = 100;
+console.log("Total con impuesto:", calcularTotal(precio));
+
+// Uso de la función con callback
+procesarOperacion(10, (num) => {
+    console.log("Resultado de la operación:", num * 2); // Ejemplo de operación en el callback
+});
+
+
+//Eejercicio4
+// Objeto para convertir
+const usuario = {
+    nombre: "Juan",
+    edad: 25
+};
+
+// Conversión a JSON
+const usuarioJSON = JSON.stringify(usuario);
+console.log("Objeto convertido a JSON:", usuarioJSON);
+
+// Conversión de JSON a objeto
+const jsonString = '{"nombre": "Juan", "edad": 25}';
+const objetoUsuario = JSON.parse(jsonString);
+console.log("JSON convertido a objeto:", objetoUsuario);
+
+// Promesa simple que se resuelve después de 2 segundos
+const miPromesa = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("La promesa se resolvió después de 2 segundos");
+    }, 2000);
+});
+
+// Ejecutar la promesa
+miPromesa.then((mensaje) => console.log(mensaje));
+
